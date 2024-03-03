@@ -2,7 +2,6 @@
 import 'package:bookly/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-
 import 'features/splash/presentation/views/splash_vies.dart';
 
 void main() {
@@ -17,9 +16,12 @@ class Bookly extends StatelessWidget {
   Widget build(BuildContext context) {
     return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor:kPrimaryColor,),
-
-         home: SplashViews(),
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor:kPrimaryColor,
+       // textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+        ),
+      
+         home: const SplashViews(),
         );
   }
 }
